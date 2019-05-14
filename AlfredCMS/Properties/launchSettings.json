@@ -14,8 +14,6 @@
       "launchBrowser": true,
       "launchUrl": "api/values",
       "environmentVariables": {
-        "JWTKey": "abcdefgabcdefgabcdefg",
-        "ConnectionString": "Server=(localdb)\\\\MSSQLLocalDB; Database = Demo; Trusted_Connection = True",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

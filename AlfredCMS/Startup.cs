@@ -1,4 +1,7 @@
-﻿using AlfredCMS.Data;
+﻿using AlfredCMS.Core.Models;
+using AlfredCMS.Core.Repositories;
+using AlfredCMS.Core.Repositories.Interfaces;
+using AlfredCMS.Data;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -26,13 +29,13 @@ namespace AlfredCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<DataContext>(options => options.UseSqlServer(Configuration["ConnectionString"]));
+            services.AddDbContext<DataContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = Demo; Trusted_Connection = True"));
 
             // Injecting Automapper and defining their options
             services.AddAutoMapper(options => { }, typeof(Startup).Assembly);
 
             // Setting up the auth config
-            string securityKey = Configuration["JWTKey"];
+            string securityKey = "abcdefgabcdefgabcdefg";
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -44,15 +47,14 @@ namespace AlfredCMS
                         ValidateAudience = false,
                         ValidateIssuerSigningKey = true,
                         //setup validate data
-                        ValidIssuer = "smesk.in",
+                        ValidIssuer = "AlfredCMS",
                         IssuerSigningKey = symmetricSecurityKey
                     };
                 });
 
 
             // Relationships
-            //services.AddTransient<IUserStore<User>, UserStore>();
-            // services.AddTransient<IRoleStore<UserRole>, RoleStore>();
+            services.AddTransient<IRepository<CategoryDTO>, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

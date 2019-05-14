@@ -9,8 +9,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AlfredCMS.Data\AlfredCMS.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

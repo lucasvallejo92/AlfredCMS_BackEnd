@@ -13,18 +13,16 @@ namespace AlfredCMS.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly IConfiguration configuration;
 
-        public AuthController(IConfiguration configuration)
+        public AuthController()
         {
-            this.configuration = configuration;
         }
 
         [HttpPost("token")]
         public ActionResult GetToken()
         {
             //security key
-            string securityKey = configuration["JWTKey"];
+            string securityKey = "abcdefgabcdefgabcdefg";
             //symmetric security key
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
 
@@ -41,7 +39,7 @@ namespace AlfredCMS.Controllers
 
             //create token
             var token = new JwtSecurityToken(
-                    issuer: "smesk.in",
+                    issuer: "AlfredCMS",
                     expires: DateTime.Now.AddHours(1),
                     signingCredentials: signingCredentials
                     , claims: claims

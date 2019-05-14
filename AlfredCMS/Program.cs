@@ -19,13 +19,6 @@ namespace AlfredCMS
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((env, conf) => {
-                var environment = env.HostingEnvironment.EnvironmentName;
-                if ( args != null)
-                {
-                    conf.AddCommandLine(args);
-                }
-            })
                 .UseStartup<Startup>();
     }
 }

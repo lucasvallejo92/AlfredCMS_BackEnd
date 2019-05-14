@@ -22,9 +22,6 @@ namespace AlfredCMS.Data.Models
         [MaxLength(32)]
         public string FirstName { get; set; }
 
-        [MaxLength(1)]
-        public string MiddleInitial { get; set; }
-
         [MaxLength(32)]
         public string LastName { get; set; }
 

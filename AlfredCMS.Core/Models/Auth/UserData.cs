@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AlfredCMS.Core.Models
+namespace AlfredCMS.Core.Models.Auth
 {
     public class UserData
     {
