@@ -12,6 +12,9 @@ namespace AlfredCMS.Data.Models
         [Key, Required]
         public int Id { get; set; }
 
+        [Required, MaxLength(64)]
+        public string Slug { get; set; }
+
         [Required, MaxLength(256)]
         public string Title { get; set; }
 

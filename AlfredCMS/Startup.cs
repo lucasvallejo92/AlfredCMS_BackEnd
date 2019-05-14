@@ -2,6 +2,7 @@
 using AlfredCMS.Core.Repositories;
 using AlfredCMS.Core.Repositories.Interfaces;
 using AlfredCMS.Data;
+using AlfredCMS.Data.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -32,7 +33,10 @@ namespace AlfredCMS
             services.AddDbContext<DataContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = Demo; Trusted_Connection = True"));
 
             // Injecting Automapper and defining their options
-            services.AddAutoMapper(options => { }, typeof(Startup).Assembly);
+            services.AddAutoMapper(options =>
+            {
+                options.CreateMap<CategoryDTO, Category>();
+            }, typeof(Startup).Assembly);
 
             // Setting up the auth config
             string securityKey = "abcdefgabcdefgabcdefg";

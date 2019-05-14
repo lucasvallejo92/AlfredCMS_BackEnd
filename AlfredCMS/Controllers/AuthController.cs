@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -31,8 +32,7 @@ namespace AlfredCMS.Controllers
 
             //add claims
             var claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.Role, "Administrator"));
-            claims.Add(new Claim(ClaimTypes.Role, "Reader"));
+            claims.Add(new Claim(ClaimTypes.Role, "ADMIN"));
             claims.Add(new Claim("Our_Custom_Claim", "Our custom value"));
             claims.Add(new Claim("Id", "110"));
 
