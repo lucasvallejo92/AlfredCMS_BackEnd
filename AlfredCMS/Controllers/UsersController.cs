@@ -40,7 +40,7 @@ namespace AlfredCMS.Controllers
 
             if (user == null)
             {
-                return NotFound(id);
+                return NotFound(new { message = "NOT_FOUND" });
             }
 
             return Ok(user);
