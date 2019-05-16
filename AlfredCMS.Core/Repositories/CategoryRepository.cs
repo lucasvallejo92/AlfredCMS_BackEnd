@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AlfredCMS.Core.Models.Data;
+
 
 namespace AlfredCMS.Core.Repositories
 {
@@ -22,19 +24,19 @@ namespace AlfredCMS.Core.Repositories
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<CategoryDTO>> GetAll()
+        public async Task<IEnumerable<CategoryDTO>> GetAllAsync()
         {
             var categories = await _context.Categories.ToListAsync();
             return _mapper.Map<IEnumerable<CategoryDTO>>(categories);
         }
 
-        public async Task<CategoryDTO> Get(string slug)
+        public async Task<CategoryDTO> GetAsync(string identifier)
         {
-            var category = await _context.Categories.Where(x => x.Slug == slug).FirstOrDefaultAsync();
+            var category = await _context.Categories.Where(x => x.Slug == identifier).FirstOrDefaultAsync();
             return _mapper.Map<CategoryDTO>(category);
         }
 
-        public async Task<bool> Add(CategoryDTO entity)
+        public async Task<bool> AddAsync(CategoryDTO entity)
         {
             var allreadyExists = await _context.Categories.Where(x => x.Slug == entity.Slug).FirstOrDefaultAsync();
 
@@ -49,9 +51,9 @@ namespace AlfredCMS.Core.Repositories
             return true;
         }
 
-        public async Task<bool> Update(string slug, CategoryDTO entity)
+        public async Task<bool> UpdateAsync(string identifier, CategoryDTO entity)
         {
-            var category = await _context.Categories.Where(x => x.Slug == slug).FirstOrDefaultAsync();
+            var category = await _context.Categories.Where(x => x.Slug == identifier).FirstOrDefaultAsync();
 
             category = _mapper.Map(entity, category);
 
@@ -66,26 +68,26 @@ namespace AlfredCMS.Core.Repositories
             }
         }
 
-        public async Task<string> Delete(string slug)
+        public async Task<ResponseType.Response> DeleteAsync(string identifier)
         {
-            var category = await _context.Categories.Where(x => x.Slug == slug).FirstOrDefaultAsync();
+            var category = await _context.Categories.Where(x => x.Slug == identifier).FirstOrDefaultAsync();
 
             if (category == null)
             {
-                return "NOT_FOUND";
+                return ResponseType.Response.Not_Found;
             }
 
             var existsOnPost = await _context.Posts.Where(x => x.CategoryId == category.Id).FirstOrDefaultAsync();
 
             if (existsOnPost != null)
             {
-                return "CANNOT_DELETE";
+                return ResponseType.Response.Cannot_Delete;
             }
 
             _context.Remove(category);
             await _context.SaveChangesAsync();
 
-            return "DELETED";
+            return ResponseType.Response.Deleted;
         }
     }
 }

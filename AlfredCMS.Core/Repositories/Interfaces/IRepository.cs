@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using AlfredCMS.Core.Models.Data;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace AlfredCMS.Core.Repositories.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAll();
-        Task<T> Get(string slug);
-        Task<bool> Add(T entity);
-        Task<bool> Update(string slug, T entity);
-        Task<string> Delete(string slug);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<T> GetAsync(string identifier);
+        Task<bool> AddAsync(T entity);
+        Task<bool> UpdateAsync(string identifier, T entity);
+        Task<ResponseType.Response> DeleteAsync(string identifier);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AlfredCMS.Core.Models;
+using AlfredCMS.Core.Models.Data;
 using AlfredCMS.Core.Repositories.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ namespace AlfredCMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "ADMIN")]
     public class CategoriesController : ControllerBase
     {
         private readonly IRepository<CategoryDTO> _repository;
@@ -24,7 +25,7 @@ namespace AlfredCMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CategoryDTO>>> GetCategories()
         {
-            var categories = await _repository.GetAll();
+            var categories = await _repository.GetAllAsync();
             return Ok(categories);
         }
 
@@ -32,7 +33,7 @@ namespace AlfredCMS.Controllers
         [HttpGet("{slug}", Name = "GetCategory")]
         public async Task<ActionResult<CategoryDTO>> GetCategory(string slug)
         {
-            var category = await _repository.Get(slug);
+            var category = await _repository.GetAsync(slug);
 
             if (category == null)
             {
@@ -45,7 +46,7 @@ namespace AlfredCMS.Controllers
         [HttpPost]
         public async Task<ActionResult<CategoryDTO>> AddCategory([FromBody] CategoryDTO category)
         {
-            var addedCategory = await _repository.Add(category);
+            var addedCategory = await _repository.AddAsync(category);
 
             if (!addedCategory)
             {
@@ -63,7 +64,7 @@ namespace AlfredCMS.Controllers
                 return BadRequest();
             }
 
-            var isUpdated = await _repository.Update(slug, category);
+            var isUpdated = await _repository.UpdateAsync(slug, category);
 
             if (!isUpdated)
             {
@@ -76,13 +77,13 @@ namespace AlfredCMS.Controllers
         [HttpDelete("{slug}")]
         public async Task<ActionResult> DeleteCategory(string slug)
         {
-            var response = await _repository.Delete(slug);
+            var response = await _repository.DeleteAsync(slug);
 
-            if (response == "NOT_FOUND")
+            if (response == ResponseType.Response.Not_Found)
             {
                 return BadRequest(new { message = "NOT_FOUND" });
             }
-            else if (response == "CANNOT_DELETE")
+            else if (response == ResponseType.Response.Cannot_Delete)
             {
                 return BadRequest(new { message = "CANNOT_DELETE" });
             }

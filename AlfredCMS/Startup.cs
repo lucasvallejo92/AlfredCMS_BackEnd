@@ -36,6 +36,8 @@ namespace AlfredCMS
             services.AddAutoMapper(options =>
             {
                 options.CreateMap<CategoryDTO, Category>();
+                options.CreateMap<PostDTO, Post>();
+                options.CreateMap<UserDTO, User>();
             }, typeof(Startup).Assembly);
 
             // Setting up the auth config
@@ -59,6 +61,8 @@ namespace AlfredCMS
 
             // Relationships
             services.AddTransient<IRepository<CategoryDTO>, CategoryRepository>();
+            services.AddTransient<IRepository<PostDTO>, PostRepository>();
+            services.AddTransient<IUserRepository<UserDTO>, UserRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

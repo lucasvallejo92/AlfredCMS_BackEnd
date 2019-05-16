@@ -6,7 +6,7 @@ namespace AlfredCMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Administrator")]
+    [Authorize(Roles = "ADMIN")]
     public class ValuesController : ControllerBase
     {
         // GET api/values
