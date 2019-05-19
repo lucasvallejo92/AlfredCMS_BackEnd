@@ -58,11 +58,17 @@ namespace AlfredCMS
                     };
                 });
 
+            services.AddMvc().AddJsonOptions(ConfigureJson);
 
             // Relationships
             services.AddTransient<IRepository<CategoryDTO>, CategoryRepository>();
             services.AddTransient<IRepository<PostDTO>, PostRepository>();
             services.AddTransient<IUserRepository<UserDTO>, UserRepository>();
+        }
+
+        private void ConfigureJson(MvcJsonOptions obj)
+        {
+            obj.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

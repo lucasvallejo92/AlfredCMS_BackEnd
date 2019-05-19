@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,6 +22,7 @@ namespace AlfredCMS.Data.Models
         [MaxLength(256)]
         public string Description { get; set; }
 
-        public Post Post { get; set; }
+        [JsonIgnore]
+        public virtual List<Post> Post { get; set; }
     }
 }

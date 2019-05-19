@@ -4,14 +4,16 @@ using AlfredCMS.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AlfredCMS.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190517010425_ModificacionPost")]
+    partial class ModificacionPost
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,7 +77,8 @@ namespace AlfredCMS.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId");
+                    b.HasIndex("CategoryId")
+                        .IsUnique();
 
                     b.HasIndex("UserId");
 
@@ -147,8 +150,8 @@ namespace AlfredCMS.Data.Migrations
             modelBuilder.Entity("AlfredCMS.Data.Models.Post", b =>
                 {
                     b.HasOne("AlfredCMS.Data.Models.Category", "Category")
-                        .WithMany("Post")
-                        .HasForeignKey("CategoryId")
+                        .WithOne("Post")
+                        .HasForeignKey("AlfredCMS.Data.Models.Post", "CategoryId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("AlfredCMS.Data.Models.User", "User")

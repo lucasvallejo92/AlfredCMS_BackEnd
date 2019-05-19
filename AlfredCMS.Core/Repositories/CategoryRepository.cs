@@ -32,7 +32,7 @@ namespace AlfredCMS.Core.Repositories
 
         public async Task<CategoryDTO> GetAsync(string identifier)
         {
-            var category = await _context.Categories.Where(x => x.Slug == identifier).FirstOrDefaultAsync();
+            var category = await _context.Categories.Where(x => x.Slug == identifier).Include(cat => cat.Post).ThenInclude(cat => cat.User).FirstOrDefaultAsync();
             return _mapper.Map<CategoryDTO>(category);
         }
 

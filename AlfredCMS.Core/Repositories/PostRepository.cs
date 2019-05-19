@@ -26,7 +26,7 @@ namespace AlfredCMS.Core.Repositories
 
         public async Task<IEnumerable<PostDTO>> GetAllAsync()
         {
-            var posts = await _context.Posts.ToListAsync();
+            var posts = await _context.Posts.Include(x => x.Category).Include(x => x.User).ToListAsync();
             return _mapper.Map<IEnumerable<PostDTO>>(posts);
         }
 

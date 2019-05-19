@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AlfredCMS.Data.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -17,5 +18,7 @@ namespace AlfredCMS.Core.Models
 
         [MaxLength(256)]
         public string Description { get; set; }
+
+        public List<Post> Post { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,6 +16,9 @@ namespace AlfredCMS.Data.Models
         [Required, MaxLength(64)]
         public string Slug { get; set; }
 
+        [Required]
+        public string Img { get; set; }
+
         [Required, MaxLength(256)]
         public string Title { get; set; }
 
@@ -24,15 +28,17 @@ namespace AlfredCMS.Data.Models
         [Required]
         public string Content { get; set; }
 
+        [JsonIgnore]
         [Required]
         public int CategoryId { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
+        [JsonIgnore]
         [Required]
         public int UserId { get; set; }
 
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         public DateTime Created { get; set; }
     }
