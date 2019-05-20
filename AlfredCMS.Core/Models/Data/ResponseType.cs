@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace AlfredCMS.Core.Models.Data
 {
     public class ResponseType
