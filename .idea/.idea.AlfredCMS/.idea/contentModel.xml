@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/Library/Caches/Rider2019.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.1/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_AlfredCMS.-180791261.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\Projects\NETCore\AlfredCMS_BackEnd" t="IncludeFlat">
       <e p="AlfredCMS" t="IncludeRecursive">
         <e p="AlfredCMS.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />
@@ -60,7 +58,6 @@
           <e p="PostRepository.cs" t="Include" />
           <e p="UserRepository.cs" t="Include" />
         </e>
-        <e p="Services" t="Include" />
       </e>
       <e p="AlfredCMS.Data" t="IncludeRecursive">
         <e p="AlfredCMS.Data.csproj" t="IncludeRecursive" />
@@ -95,5 +92,7 @@
       <e p="AlfredCMS.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\lucas\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\lucas\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_AlfredCMS.-868962634.00" t="ExcludeRecursive" />
   </component>
 </project>
