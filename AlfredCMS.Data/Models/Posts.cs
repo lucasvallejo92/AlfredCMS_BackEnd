@@ -1,32 +1,22 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
 
-namespace AlfredCMS.Core.Models
+namespace AlfredCMS.Data.Models
 {
-    public partial class PostDTO
+    public partial class Posts
     {
+        public int Id { get; set; }
         public int CategoryId { get; set; }
-
-        [Required]
         public int UserId { get; set; }
-
-        [Required]
         public string Slug { get; set; }
-
         public string Img { get; set; }
-
-        [Required]
         public string Title { get; set; }
-
-        [Required]
         public string Excerpt { get; set; }
-
-        [Required]
         public string Content { get; set; }
-
         public DateTime? Created { get; set; }
-
         public DateTime? Updated { get; set; }
+
+        public virtual Categories Category { get; set; }
+        public virtual Users User { get; set; }
     }
 }

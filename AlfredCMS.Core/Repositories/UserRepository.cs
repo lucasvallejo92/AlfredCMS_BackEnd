@@ -45,7 +45,7 @@ namespace AlfredCMS.Core.Repositories
                 return false;
             }
 
-            _context.Users.Add(_mapper.Map<User>(entity));
+            _context.Users.Add(_mapper.Map<Users>(entity));
             await _context.SaveChangesAsync();
 
             return true;

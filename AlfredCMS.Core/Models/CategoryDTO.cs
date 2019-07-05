@@ -1,24 +1,16 @@
-﻿using AlfredCMS.Data.Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace AlfredCMS.Core.Models
 {
-    public class CategoryDTO
+    public partial class CategoryDTO
     {
-        public int Id { get; set; }
-
-        [Required, MaxLength(64)]
+        [Required]
         public string Name { get; set; }
 
-        [Required, MaxLength(64)]
+        [Required]
         public string Slug { get; set; }
 
-        [MaxLength(256)]
+        [Required]
         public string Description { get; set; }
-
-        public List<Post> Post { get; set; }
     }
 }

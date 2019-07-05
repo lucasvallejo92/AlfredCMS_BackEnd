@@ -45,7 +45,7 @@ namespace AlfredCMS.Core.Repositories
                 return false;
             }
 
-            _context.Posts.Add(_mapper.Map<Post>(entity));
+            _context.Posts.Add(_mapper.Map<Posts>(entity));
             await _context.SaveChangesAsync();
 
             return true;

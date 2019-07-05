@@ -1,6 +1,5 @@
 ﻿using AlfredCMS.Core.Models;
 using AlfredCMS.Core.Repositories.Interfaces;
-using AlfredCMS.Data;
 using AlfredCMS.Data.Models;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +31,7 @@ namespace AlfredCMS.Core.Repositories
 
         public async Task<CategoryDTO> GetAsync(string identifier)
         {
-            var category = await _context.Categories.Where(x => x.Slug == identifier).Include(cat => cat.Post).ThenInclude(cat => cat.User).FirstOrDefaultAsync();
+            var category = await _context.Categories.Where(x => x.Slug == identifier).Include(cat => cat.Posts).ThenInclude(cat => cat.User).FirstOrDefaultAsync();
             return _mapper.Map<CategoryDTO>(category);
         }
 
@@ -45,7 +44,7 @@ namespace AlfredCMS.Core.Repositories
                 return false;
             }
 
-            _context.Categories.Add(_mapper.Map<Category>(entity));
+            _context.Categories.Add(_mapper.Map<Categories>(entity));
             await _context.SaveChangesAsync();
 
             return true;

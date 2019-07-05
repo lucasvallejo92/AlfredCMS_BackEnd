@@ -1,19 +1,17 @@
 ﻿using AlfredCMS.Core.Models;
 using AlfredCMS.Core.Repositories;
 using AlfredCMS.Core.Repositories.Interfaces;
-using AlfredCMS.Data;
 using AlfredCMS.Data.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace AlfredCMS
 {
@@ -30,14 +28,14 @@ namespace AlfredCMS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<DataContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = Demo; Trusted_Connection = True"));
+            services.AddDbContext<DataContext>(options => options.UseMySQL("server=localhost;port=32774;user=root;password=123456;database=alfred_cms"));
 
             // Injecting Automapper and defining their options
             services.AddAutoMapper(options =>
             {
-                options.CreateMap<CategoryDTO, Category>();
-                options.CreateMap<PostDTO, Post>();
-                options.CreateMap<UserDTO, User>();
+                options.CreateMap<CategoryDTO, Categories>();
+                options.CreateMap<PostDTO, Posts>();
+                options.CreateMap<UserDTO, Users>();
             }, typeof(Startup).Assembly);
 
             // Setting up the auth config
