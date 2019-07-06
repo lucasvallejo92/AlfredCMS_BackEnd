@@ -28,66 +28,102 @@ namespace AlfredCMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PostDTO>>> GetPosts()
         {
-            var posts = await _repository.GetAllAsync();
-            return Ok(posts);
+            try
+            {
+                var posts = await _repository.GetAllAsync();
+                return Ok(posts);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [AllowAnonymous]
         [HttpGet("{slug}", Name = "GetPost")]
         public async Task<ActionResult<PostDTO>> GetPost(string slug)
         {
-            var post = await _repository.GetAsync(slug);
-
-            if (post == null)
+            try
             {
-                return NotFound(slug);
-            }
+                var post = await _repository.GetAsync(slug);
 
-            return Ok(post);
+                if (post == null)
+                {
+                    return NotFound(slug);
+                }
+
+                return Ok(post);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<PostDTO>> AddPost([FromBody] PostDTO post)
         {
-            var addedCategory = await _repository.AddAsync(post);
-
-            if (!addedCategory)
+            try
             {
-                return BadRequest(new { message = "ALLREADY_EXISTS" });
-            }
+                var addedCategory = await _repository.AddAsync(post);
 
-            return new CreatedAtRouteResult("GetPost", new { slug = post.Slug }, post);
+                if (!addedCategory)
+                {
+                    return BadRequest(new { message = "ALLREADY_EXISTS" });
+                }
+
+                return new CreatedAtRouteResult("GetPost", new { slug = post.Slug }, post);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPut("{slug}")]
         public async Task<ActionResult> UpdatePost(string slug, [FromBody] PostDTO post)
         {
-            if (post.Slug != slug)
+            try
             {
-                return BadRequest();
-            }
+                if (post.Slug != slug)
+                {
+                    return BadRequest();
+                }
 
-            var isUpdated = await _repository.UpdateAsync(slug, post);
+                var isUpdated = await _repository.UpdateAsync(slug, post);
 
-            if (!isUpdated)
+                if (!isUpdated)
+                {
+                    return BadRequest(new { message = "NOT_EXISTS" });
+                }
+
+                return Ok();
+                
+            } catch (Exception)
             {
-                return BadRequest(new { message = "NOT_EXISTS" });
+                return StatusCode(500);
             }
-
-            return Ok();
         }
 
         [HttpDelete("{slug}")]
         public async Task<ActionResult> DeletePost(string slug)
         {
-            var response = await _repository.DeleteAsync(slug);
-
-            if (response == ResponseType.Response.Not_Found)
+            try
             {
-                return BadRequest(new { message = "NOT_FOUND" });
-            }
+                var response = await _repository.DeleteAsync(slug);
 
-            return Ok(new { message = "DELETED" });
+                if (response == ResponseType.Response.Not_Found)
+                {
+                    return BadRequest(new { message = "NOT_FOUND" });
+                }
+
+                return Ok(new { message = "DELETED" });
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
+            
         }
     }
 }

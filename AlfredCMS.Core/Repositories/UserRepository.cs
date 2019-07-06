@@ -10,10 +10,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AlfredCMS.Core.Models.Auth;
+using AlfredCMS.Core.Repositories.Interfaces.Auth;
 
 namespace AlfredCMS.Core.Repositories
 {
-    public class UserRepository : IUserRepository<UserDTO>
+    public class UserRepository : IUserRepository<UserDTO>, IAuthInterface<UserData>
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
@@ -80,6 +82,13 @@ namespace AlfredCMS.Core.Repositories
             await _context.SaveChangesAsync();
 
             return ResponseType.Response.Deleted;
+        }
+        
+        public async Task<ResponseType.Response> AuthorizeAsync(UserData credentials)
+        {
+            var user = await _context.Users.Where(x => x.Email == credentials.Email && x.PasswordHash == credentials.Password).FirstOrDefaultAsync();
+
+            return user == null ? ResponseType.Response.Not_Found : ResponseType.Response.Ok;
         }
     }
 }

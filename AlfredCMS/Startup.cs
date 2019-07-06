@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using AlfredCMS.Core.Models.Auth;
+using AlfredCMS.Core.Repositories.Interfaces.Auth;
 using Microsoft.EntityFrameworkCore;
 
 namespace AlfredCMS
@@ -62,6 +64,7 @@ namespace AlfredCMS
             services.AddTransient<IRepository<CategoryDTO>, CategoryRepository>();
             services.AddTransient<IRepository<PostDTO>, PostRepository>();
             services.AddTransient<IUserRepository<UserDTO>, UserRepository>();
+            services.AddTransient<IAuthInterface<UserData>, UserRepository>();
         }
 
         private void ConfigureJson(MvcJsonOptions obj)

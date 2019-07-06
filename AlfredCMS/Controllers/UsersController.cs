@@ -19,7 +19,6 @@ namespace AlfredCMS.Controllers
         private readonly IUserRepository<UserDTO> _repository;
 
         public UsersController(IUserRepository<UserDTO> repository)
-
         {
             _repository = repository;
         }
@@ -28,66 +27,101 @@ namespace AlfredCMS.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsers()
         {
-            var users = await _repository.GetUsersAsync();
-            return Ok(users);
+            try
+            {
+                var users = await _repository.GetUsersAsync();
+                return Ok(users);
+
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [AllowAnonymous]
         [HttpGet("{slug}", Name = "GetUser")]
         public async Task<ActionResult<UserDTO>> GetPost(int id)
         {
-            var user = await _repository.GetUserAsync(id);
-
-            if (user == null)
+            try
             {
-                return NotFound(new { message = "NOT_FOUND" });
-            }
+                var user = await _repository.GetUserAsync(id);
 
-            return Ok(user);
+                if (user == null)
+                {
+                    return NotFound(new { message = "NOT_FOUND" });
+                }
+
+                return Ok(user);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPost]
         public async Task<ActionResult<UserDTO>> AddPost([FromBody] UserDTO user)
         {
-            var addedCategory = await _repository.AddUserAsync(user);
-
-            if (!addedCategory)
+            try
             {
-                return BadRequest(new { message = "ALLREADY_EXISTS" });
-            }
+                var addedCategory = await _repository.AddUserAsync(user);
 
-            return new CreatedAtRouteResult("GetUser", new { slug = user.Id }, user);
+                if (!addedCategory)
+                {
+                    return BadRequest(new { message = "ALLREADY_EXISTS" });
+                }
+
+                return new CreatedAtRouteResult("GetUser", new { slug = user.Id }, user);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPut("{slug}")]
         public async Task<ActionResult> UpdatePost(int id, [FromBody] UserDTO user)
         {
-            if (user.Id != id)
+            try
             {
-                return BadRequest();
-            }
+                if (user.Id != id)
+                {
+                    return BadRequest();
+                }
 
-            var isUpdated = await _repository.UpdateUserAsync(id, user);
+                var isUpdated = await _repository.UpdateUserAsync(id, user);
 
-            if (!isUpdated)
+                if (!isUpdated)
+                {
+                    return BadRequest(new { message = "NOT_EXISTS" });
+                }
+
+                return Ok();
+                
+            } catch (Exception)
             {
-                return BadRequest(new { message = "NOT_EXISTS" });
+                return StatusCode(500);
             }
-
-            return Ok();
         }
 
         [HttpDelete("{slug}")]
         public async Task<ActionResult> DeletePost(int id)
         {
-            var response = await _repository.DeleteUserAsync(id);
-
-            if (response == ResponseType.Response.Not_Found)
+            try
             {
-                return BadRequest(new { message = "NOT_FOUND" });
-            }
+                var response = await _repository.DeleteUserAsync(id);
 
-            return Ok(new { message = "DELETED" });
+                if (response == ResponseType.Response.Not_Found)
+                {
+                    return BadRequest(new { message = "NOT_FOUND" });
+                }
+
+                return Ok(new { message = "DELETED" });
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
     }
 }

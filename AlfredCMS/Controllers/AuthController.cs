@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Microsoft.AspNetCore.Authorization;
+using System.Threading.Tasks;
+using AlfredCMS.Core.Models.Auth;
+using AlfredCMS.Core.Models.Data;
+using AlfredCMS.Core.Repositories.Interfaces.Auth;
+using AlfredCMS.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 
 namespace AlfredCMS.Controllers
 {
@@ -14,39 +12,32 @@ namespace AlfredCMS.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-
-        public AuthController()
+        
+        private readonly IAuthInterface<UserData> _repository;
+        public AuthController(IAuthInterface<UserData> repository)
         {
+            _repository = repository;
         }
 
-        [HttpPost("token")]
-        public ActionResult GetToken()
+        [HttpPost("signin")]
+        public async Task<ActionResult> GetToken([FromBody] UserData credentials)
         {
-            //security key
-            string securityKey = "abcdefgabcdefgabcdefg";
-            //symmetric security key
-            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
-
-            //signing credentials
-            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
-
-            //add claims
-            var claims = new List<Claim>();
-            claims.Add(new Claim(ClaimTypes.Role, "ADMIN"));
-            claims.Add(new Claim("Our_Custom_Claim", "Our custom value"));
-            claims.Add(new Claim("Id", "110"));
-
-
-            //create token
-            var token = new JwtSecurityToken(
-                    issuer: "AlfredCMS",
-                    expires: DateTime.Now.AddHours(1),
-                    signingCredentials: signingCredentials
-                    , claims: claims
-                );
-
-            //return token
-            return Ok(new JwtSecurityTokenHandler().WriteToken(token));
+            try
+            {
+                var user = await _repository.AuthorizeAsync(credentials);
+                
+                if (user == ResponseType.Response.Not_Found)
+                {
+                    return Unauthorized();
+                }
+                
+                var token = TokenCreator.CreateToken();
+                return Ok(token);
+                
+            } catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
     }
 }

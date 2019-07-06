@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9843bb89-e6c0-4a60-8b6a-83f4540a1d98" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlfredCMS/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.AlfredCMS/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AlfredCMS/Extensions/TokenCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS.Core/Models/Auth/UserData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS.Core/Models/Auth/UserData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS.Core/Models/Data/ResponseType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS.Core/Models/Data/ResponseType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IAuthInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/Auth/IAuthInterface.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS.Core/Repositories/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS.Core/Repositories/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS.Data/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS.Data/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Controllers/CategoriesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Controllers/CategoriesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Controllers/PostsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Controllers/PostsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Controllers/ValuesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AlfredCMS/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AlfredCMS/Startup.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+              <folding>
+                <marker date="1562388288431" expanded="false" signature="6:312" ph="..." />
+                <marker date="1562388288431" expanded="true" signature="345:3371" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="482:3369" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="620:678" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="795:1043" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="821:947" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="965:1033" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1180:1583" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1206:1487" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1318:1422" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1505:1573" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1685:2166" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1711:2070" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="1836:1948" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2088:2156" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2279:2806" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2305:2710" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2354:2431" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2542:2649" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2728:2796" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2897:3363" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="2923:3267" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="3073:3179" ph="{...}" />
+                <marker date="1562388288431" expanded="true" signature="3285:3353" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+              <folding>
+                <marker date="1562418984461" expanded="true" signature="6:222" ph="..." />
+                <marker date="1562418984461" expanded="true" signature="255:1186" ph="{...}" />
+                <marker date="1562418984461" expanded="true" signature="358:1184" ph="{...}" />
+                <marker date="1562418984461" expanded="true" signature="503:561" ph="{...}" />
+                <marker date="1562418984461" expanded="true" signature="673:1178" ph="{...}" />
+                <marker date="1562418984461" expanded="true" signature="865:944" ph="{...}" />
+                <marker date="1562418984461" expanded="true" signature="1100:1168" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AlfredCMS/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+              <folding>
+                <marker date="1562419179108" expanded="true" signature="6:582" ph="..." />
+                <marker date="1562419179108" expanded="true" signature="603:3664" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="630:3662" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="689:752" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="975:2830" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="1351:1534" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="1902:2410" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="2010:2391" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="2886:3011" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="3199:3656" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="3246:3323" ph="{...}" />
+                <marker date="1562419179108" expanded="true" signature="3340:3543" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AlfredCMS/Extensions/TokenCreator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding>
+                <marker date="1562389846902" expanded="true" signature="6:173" ph="..." />
+                <marker date="1562389846902" expanded="true" signature="205:1293" ph="{...}" />
+                <marker date="1562389846902" expanded="true" signature="237:1291" ph="{...}" />
+                <marker date="1562389846902" expanded="true" signature="286:1285" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/Auth/IAuthInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/UserDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/CategoryDTO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Controllers/CategoriesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Controllers/PostsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1571C05F-E355-4EE9-BF63-E97B4EF6249D/2F/SymmetricSecurityKey.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/Auth/UserData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/Data/ResponseType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AlfredCMS/Extensions/TokenCreator.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/AlfredCMS/Extensions/ModelValidationAttribute.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Controllers/CategoriesController.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Controllers/PostsController.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS.Core/Models/Data/ResponseType.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/Auth/IAuthInterface.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS.Core/Repositories/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS.Core/Models/Auth/UserData.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Extensions/TokenCreator.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs" />
+        <option value="$PROJECT_DIR$/AlfredCMS/Startup.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="258" />
+    <option name="y" value="43" />
+    <option name="width" value="1404" />
+    <option name="height" value="953" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AlfredCMS" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AlfredCMS" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AlfredCMS" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="AlfredCMS" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AlfredCMS" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Extensions" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-all-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.AlfredCMS">
+    <configuration name="AlfredCMS" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AlfredCMS/AlfredCMS.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="AlfredCMS" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AlfredCMS: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/AlfredCMS/AlfredCMS.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value=".NETCoreApp,Version=v2.2" />
+      <option name="LAUNCH_PROFILE_NAME" value="IIS Express" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9843bb89-e6c0-4a60-8b6a-83f4540a1d98" name="Default Changelist" comment="" />
+      <created>1562385717839</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562385717839</updated>
+      <workItem from="1562385722099" duration="4241000" />
+      <workItem from="1562418540851" duration="702000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4943000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12626532" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22069694" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" />
+      <window_info anchor="bottom" id="REST Client" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32946146" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/CategoryDTO.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <marker date="1562293464509" expanded="true" signature="77:319" ph="{...}" />
+            <marker date="1562293464509" expanded="true" signature="116:317" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/dotnet/sdk/2.2.107/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="2109" column="4" selection-start-line="2109" selection-start-column="4" selection-end-line="2109" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1571C05F-E355-4EE9-BF63-E97B4EF6249D/2F/SymmetricSecurityKey.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/PostsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="100" column="16" selection-start-line="100" selection-start-column="16" selection-end-line="100" selection-end-column="16" />
+          <folding>
+            <marker date="1562387752088" expanded="false" signature="6:312" ph="..." />
+            <marker date="1562387752088" expanded="true" signature="345:3377" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="482:3375" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="613:671" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="788:1050" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="814:954" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="972:1040" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1192:1568" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1218:1472" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1328:1407" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1490:1558" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1670:2149" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1696:2053" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="1817:1929" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2071:2139" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2267:2796" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2293:2700" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2346:2423" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2532:2639" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2718:2786" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2892:3369" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="2918:3260" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="3066:3172" ph="{...}" />
+            <marker date="1562387752088" expanded="true" signature="3278:3346" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/UserDTO.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding>
+            <marker date="1562293448376" expanded="false" signature="6:67" ph="..." />
+            <marker date="1562293448376" expanded="true" signature="100:393" ph="{...}" />
+            <marker date="1562293448376" expanded="true" signature="135:391" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/Data/ResponseType.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <marker date="1562388147439" expanded="true" signature="37:242" ph="{...}" />
+            <marker date="1562388147439" expanded="true" signature="69:240" ph="{...}" />
+            <marker date="1562388147439" expanded="true" signature="104:234" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IUserRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1559874095697" expanded="false" signature="6:97" ph="..." />
+            <marker date="1559874095697" expanded="true" signature="147:460" ph="{...}" />
+            <marker date="1559874095697" expanded="true" signature="204:458" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/IRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding>
+            <marker date="1559874095697" expanded="false" signature="6:97" ph="..." />
+            <marker date="1559874095697" expanded="true" signature="147:472" ph="{...}" />
+            <marker date="1559874095697" expanded="true" signature="201:470" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/Interfaces/Auth/IAuthInterface.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="35" />
+          <folding>
+            <marker date="1562389075038" expanded="false" signature="6:130" ph="..." />
+            <marker date="1562389075038" expanded="true" signature="185:322" ph="{...}" />
+            <marker date="1562389075038" expanded="true" signature="241:320" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Models/Auth/UserData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <marker date="1562389338678" expanded="true" signature="82:258" ph="{...}" />
+            <marker date="1562389338678" expanded="true" signature="110:256" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS.Core/Repositories/UserRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
+          <folding>
+            <marker date="1562389139727" expanded="false" signature="6:415" ph="..." />
+            <marker date="1562389139727" expanded="true" signature="454:2871" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="541:2869" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="704:786" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="851:992" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="1049:1206" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="1268:1628" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="1426:1484" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="1700:2070" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="1864:1972" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="2002:2060" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="2144:2503" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="2275:2359" ph="{...}" />
+            <marker date="1562389139727" expanded="true" signature="2598:2863" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/CategoriesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="113" column="17" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
+          <folding>
+            <marker date="1562387510239" expanded="false" signature="6:260" ph="..." />
+            <marker date="1562387510239" expanded="true" signature="293:3589" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="435:3587" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="579:637" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="763:1030" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="789:922" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="952:1020" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1184:1556" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1210:1460" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1328:1407" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1478:1546" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1674:2153" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1700:2057" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="1825:1937" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2075:2143" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2283:2815" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2309:2707" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2366:2443" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2556:2663" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2737:2805" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2915:3581" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="2941:3473" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="3058:3459" ph="{...}" />
+            <marker date="1562387510239" expanded="true" signature="3503:3571" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Extensions/TokenCreator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding>
+            <marker date="1562389846902" expanded="true" signature="6:173" ph="..." />
+            <marker date="1562389846902" expanded="true" signature="205:1293" ph="{...}" />
+            <marker date="1562389846902" expanded="true" signature="237:1291" ph="{...}" />
+            <marker date="1562389846902" expanded="true" signature="286:1285" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/UsersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <marker date="1562388288431" expanded="false" signature="6:312" ph="..." />
+            <marker date="1562388288431" expanded="true" signature="345:3371" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="482:3369" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="620:678" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="795:1043" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="821:947" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="965:1033" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1180:1583" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1206:1487" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1318:1422" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1505:1573" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1685:2166" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1711:2070" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="1836:1948" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2088:2156" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2279:2806" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2305:2710" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2354:2431" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2542:2649" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2728:2796" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2897:3363" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="2923:3267" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="3073:3179" ph="{...}" />
+            <marker date="1562388288431" expanded="true" signature="3285:3353" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Controllers/AuthController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <folding>
+            <marker date="1562418984461" expanded="true" signature="6:222" ph="..." />
+            <marker date="1562418984461" expanded="true" signature="255:1186" ph="{...}" />
+            <marker date="1562418984461" expanded="true" signature="358:1184" ph="{...}" />
+            <marker date="1562418984461" expanded="true" signature="503:561" ph="{...}" />
+            <marker date="1562418984461" expanded="true" signature="673:1178" ph="{...}" />
+            <marker date="1562418984461" expanded="true" signature="865:944" ph="{...}" />
+            <marker date="1562418984461" expanded="true" signature="1100:1168" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Extensions/ModelValidationAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AlfredCMS/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <marker date="1562419179108" expanded="true" signature="6:582" ph="..." />
+            <marker date="1562419179108" expanded="true" signature="603:3664" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="630:3662" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="689:752" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="975:2830" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="1351:1534" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="1902:2410" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="2010:2391" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="2886:3011" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="3199:3656" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="3246:3323" ph="{...}" />
+            <marker date="1562419179108" expanded="true" signature="3340:3543" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

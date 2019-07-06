@@ -5,6 +5,7 @@ namespace AlfredCMS.Core.Models.Data
     {
         public enum Response
         {
+            Ok,
             Not_Found,
             Cannot_Delete,
             Not_Exists,
