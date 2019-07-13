@@ -41,7 +41,7 @@ namespace AlfredCMS
             }, typeof(Startup).Assembly);
 
             // Setting up the auth config
-            string securityKey = "abcdefgabcdefgabcdefg";
+            const string securityKey = "abcdefgabcdefgabcdefg";
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(securityKey));
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

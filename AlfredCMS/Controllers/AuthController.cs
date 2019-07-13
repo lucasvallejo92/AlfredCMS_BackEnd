@@ -31,8 +31,9 @@ namespace AlfredCMS.Controllers
                     return Unauthorized();
                 }
                 
-                var token = TokenCreator.CreateToken();
-                return Ok(token);
+                var key = TokenCreator.CreateToken();
+                var result = new ObjectResult(new { token = key });
+                return result;
                 
             } catch (Exception)
             {

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace AlfredCMS.Core.Models
@@ -28,5 +29,7 @@ namespace AlfredCMS.Core.Models
         public DateTime? Created { get; set; }
 
         public DateTime? Updated { get; set; }
+        
+        public UserDTO User { get; set; }
     }
 }

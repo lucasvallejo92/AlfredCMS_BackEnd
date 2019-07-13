@@ -32,7 +32,7 @@ namespace AlfredCMS.Core.Repositories
 
         public async Task<PostDTO> GetAsync(string identifier)
         {
-            var post = await _context.Posts.Where(x => x.Slug == identifier).FirstOrDefaultAsync();
+            var post = await _context.Posts.Where(x => x.Slug == identifier).Include(x => x.User).FirstOrDefaultAsync();
             return _mapper.Map<PostDTO>(post);
         }
 
